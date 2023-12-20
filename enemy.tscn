@@ -2,17 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://clwpo83yorvtm" path="res://assets/enemy.png" id="1_smv4i"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_njq0k"]
-radius = 425.0
-height = 1166.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8niq5"]
+size = Vector2(723.12, 1005.02)
 
 [node name="Enemy" type="Sprite2D"]
-position = Vector2(662, 596)
+position = Vector2(595, 216)
+scale = Vector2(0.19084, 0.229597)
 texture = ExtResource("1_smv4i")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 gravity_scale = 2.66454e-15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(-47, 70)
-shape = SubResource("CapsuleShape2D_njq0k")
+position = Vector2(-10.4805, 1.63336)
+shape = SubResource("RectangleShape2D_8niq5")

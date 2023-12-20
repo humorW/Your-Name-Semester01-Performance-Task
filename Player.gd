@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Area2D
 
 @export var Speed = 400
 
@@ -25,9 +25,9 @@ func _process(delta):
 		velocity = velocity.normalized() * Speed
 	position += velocity * delta
 	
-	
 
 
-func _on_child_exiting_tree(node):
+func _on_body_entered(body):
 	hide()
-
+	bg_music.stop()
+	enemy_hit.play()

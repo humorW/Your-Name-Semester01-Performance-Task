@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://duemjd0qhekrw"]
 
 [ext_resource type="Texture2D" uid="uid://bwmny50vdxvr1" path="res://assets/wallpaperCabin.jpg" id="1_85gfb"]
-[ext_resource type="PackedScene" uid="uid://l72idgthyk85" path="res://player.tscn" id="2_613ps"]
+[ext_resource type="PackedScene" uid="uid://wy4tduec5vbl" path="res://player.tscn" id="2_613ps"]
 [ext_resource type="PackedScene" uid="uid://cre62q5m2r4tq" path="res://enemy.tscn" id="3_w02vb"]
 [ext_resource type="AudioStream" uid="uid://dijlc3v6i0or3" path="res://assets/bg_music.mp3" id="4_2rmk4"]
 [ext_resource type="AudioStream" uid="uid://25h8317w24nw" path="res://assets/enemy_hit.mp3" id="5_0lid5"]
@@ -14,13 +14,11 @@ scale = Vector2(0.61, 0.61)
 texture = ExtResource("1_85gfb")
 centered = false
 
-[node name="Player" parent="." instance=ExtResource("2_613ps")]
-position = Vector2(108.938, 429.125)
-scale = Vector2(0.303198, 0.300694)
+[node name="player" parent="." instance=ExtResource("2_613ps")]
 
 [node name="Enemy" parent="." instance=ExtResource("3_w02vb")]
-position = Vector2(1023, 328)
-scale = Vector2(0.367684, 0.411504)
+position = Vector2(1002, 268)
+scale = Vector2(0.186387, 0.229351)
 
 [node name="bg_music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_2rmk4")
@@ -28,4 +26,4 @@ stream = ExtResource("4_2rmk4")
 [node name="enemy_hit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_0lid5")
 
-[connection signal="child_exiting_tree" from="Player" to="Player" method="_on_child_exiting_tree"]
+[connection signal="body_entered" from="player" to="player" method="_on_body_entered"]
