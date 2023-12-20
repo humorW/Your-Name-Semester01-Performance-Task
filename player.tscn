@@ -17,3 +17,5 @@ script = ExtResource("2_n03mm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(-0.000244141, -1.69025)
 shape = SubResource("RectangleShape2D_4ic8i")
+
+[connection signal="hidden" from="." to="." method="_on_hidden"]

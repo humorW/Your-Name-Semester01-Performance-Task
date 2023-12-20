@@ -11,6 +11,7 @@ position = Vector2(662, 596)
 texture = ExtResource("1_smv4i")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 2.66454e-15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(-47, 70)
