@@ -18,4 +18,8 @@ centered = false
 position = Vector2(1002, 268)
 scale = Vector2(0.186387, 0.229351)
 
+[node name="bg_music" type="AudioStreamPlayer2D" parent="."]
+
+[node name="enemy_hit" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="body_entered" from="player" to="player" method="_on_body_entered"]
