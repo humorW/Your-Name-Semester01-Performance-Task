@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://duemjd0qhekrw"]
+
+[ext_resource type="Texture2D" uid="uid://bwmny50vdxvr1" path="res://assets/wallpaperCabin.jpg" id="1_85gfb"]
+[ext_resource type="Texture2D" uid="uid://vs551jdj25r0" path="res://assets/player.png" id="2_wtggm"]
+[ext_resource type="Script" path="res://Player.gd" id="3_tdthc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urjfp"]
+size = Vector2(283.049, 273.803)
+
+[node name="World" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.61, 0.61)
+texture = ExtResource("1_85gfb")
+centered = false
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(980, 261)
+scale = Vector2(0.282637, 0.295833)
+texture = ExtResource("2_wtggm")
+script = ExtResource("3_tdthc")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/RigidBody2D"]
+visible = false
+position = Vector2(-0.000244141, -1.69025)
+shape = SubResource("RectangleShape2D_urjfp")
